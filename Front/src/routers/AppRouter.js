@@ -1,9 +1,16 @@
+/* Componente principal encargado de mostrar la caja de busqueda y arbol
+de rutas
+
+Nota: se usa HashRouter para evitar futuros errores en el despliegue 
+en netlify
+*/
+
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import { ProductDetail } from "../components/productDetail/ProductDetail";
 import { SearchBox } from "../components/searchBox/SearchBox";
 import { SearchResult } from "../components/searchResult/SearchResult";
-///items?search=:product
+
 export const AppRouter = () => {
   return (
     <Router>

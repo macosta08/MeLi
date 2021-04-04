@@ -1,3 +1,5 @@
+/* Componente encargado rederizar dinamicamente cada tarjeta*/
+
 import React from "react";
 import { Product } from "../product/Product";
 

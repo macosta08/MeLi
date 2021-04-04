@@ -1,6 +1,7 @@
+/* CustomHook que se encarga de manejar los formulario */
+
 import { useState } from "react";
 
-// customHook que se encarga de manejar los formularios
 export const useForm = (initialState = {}) => {
   const [values, setValues] = useState(initialState);
 

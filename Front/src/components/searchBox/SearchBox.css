@@ -65,7 +65,6 @@ nav form.search-box button {
   }
 }
 
-/* Change Autocomplete styles in Chrome*/
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,

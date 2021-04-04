@@ -1,3 +1,6 @@
+/* Componente encargado de  armar el contenerdor del detalle
+del producto*/
+
 import React from "react";
 import { formatCurrency } from "../../utils/formatter";
 import "./ContainerDetail.css";

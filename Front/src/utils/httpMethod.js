@@ -1,3 +1,5 @@
+/* Metodo función http */
+
 import axios from "axios";
 
 export const URL = "https://infinite-castle-48786.herokuapp.com";

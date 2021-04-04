@@ -1,3 +1,7 @@
+/* Componente encargado de  armar la tarjeta por producto 
+ Se llama a la funcion formatCurrency para formatear el precio
+*/
+
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Product.css";

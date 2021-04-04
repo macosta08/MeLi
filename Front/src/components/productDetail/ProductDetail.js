@@ -1,8 +1,14 @@
+/* Componente encargado de hacer el llamado al servidor 
+cada vez que cambie la URL y rederizar el Breadcrumb y el 
+contenerdor del detalle del producto */
+
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
+
 import { request, URL } from "../../utils/httpMethod";
 import { Breadcrumb } from "../breadcrumb/Breadcrumb";
 import { ContainerDetail } from "../containerDetail/ContainerDetail";
+import { Spinner } from "../spinner/Spinner";
 import "./ProductDetail.css";
 export const ProductDetail = () => {
   let { id } = useParams();
@@ -21,6 +27,7 @@ export const ProductDetail = () => {
 
   return (
     <>
+      {!product && <Spinner />}
       {product && (
         <main>
           <Breadcrumb categories={product.categories} />

@@ -1,3 +1,6 @@
+/* Componente encargado de obtener el valor del input y 
+cambiar la URL de acuerdo al valor obtenido */
+
 import React from "react";
 import queryString from "query-string";
 import { useHistory } from "react-router";

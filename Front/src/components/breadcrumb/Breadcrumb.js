@@ -1,3 +1,5 @@
+/* Componente encargado de armar el Breadcrumb */
+
 import React from "react";
 import "./Breadcrumb.css";
 export const Breadcrumb = ({ categories }) => {
