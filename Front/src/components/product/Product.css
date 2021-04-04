@@ -84,7 +84,7 @@ div .location > p {
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 640px) {
   div .product-title {
     font-size: 14px;
   }
