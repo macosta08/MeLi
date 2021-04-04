@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* para ajustarse al tamaño de la pantalla  */
+  background: #eee;
+}
+
+nav {
+  background: #ffe600;
+  padding: 10px 150px;
+  display: inline-flex;
+  width: 100%;
+}
+
+nav div.logo {
+  background-image: url("https://http2.mlstatic.com/frontend-assets/ui-navigation/5.14.3/mercadolibre/logo__small.png");
+  background-repeat: no-repeat;
+  background-color: #ffe600;
+  background-position: center; /* Center the image */
+  height: 40px;
+  width: 60px;
+}
+
+nav form.search-box {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  margin-left: 20px;
+  border-radius: 4px;
+}
+
+nav form.search-box input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none; /* para que no aparezca la linea cuando se hace focus*/
+  border-radius: 4px 0 0 4px;
+  padding: 0 10px;
+  font-size: 18px;
+  background: #fff;
+}
+
+nav form.search-box button {
+  height: 100%;
+  width: 40px;
+  border: none;
+  background: #eeeeee;
+  border-radius: 0 4px 4px 0;
+  outline: none; /* para que no aparezca la linea cuando se hace focus*/
+  cursor: pointer; /* para que aparezca la manito*/
+}
+
+@media (max-width: 800px) {
+  nav {
+    padding: 10px 75px;
+  }
+  nav form.search-box input {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 650px) {
+  nav {
+    padding: 10px 25px;
+  }
+}
+
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s;
+  -webkit-text-fill-color: black !important;
+}

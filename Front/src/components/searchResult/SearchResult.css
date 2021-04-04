@@ -1,0 +1,18 @@
+/***************************
+main estilos para que este centrado 
+******************************/
+main {
+  padding: 0px 150px;
+}
+
+@media (max-width: 800px) {
+  main {
+    padding: 0px 75px;
+  }
+}
+
+@media (max-width: 650px) {
+  main {
+    padding: 0px 25px;
+  }
+}

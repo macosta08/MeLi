@@ -1,0 +1,30 @@
+.breadcrumb {
+  color: #999999;
+  font-size: 14px;
+  margin: 16px 0 16px 0;
+}
+
+.icon-rigth {
+  font-size: 12px;
+  margin: 0px 10px 0px 10px;
+}
+
+@media (max-width: 800px) {
+  .breadcrumb {
+    font-size: 12px;
+  }
+  .icon-rigth {
+    font-size: 10px;
+    margin: 0px 8px 0px 8px;
+  }
+}
+
+@media (max-width: 650px) {
+  .breadcrumb {
+    font-size: 10px;
+  }
+  .icon-rigth {
+    font-size: 8px;
+    margin: 0px 6px 0px 6px;
+  }
+}
