@@ -1,0 +1,241 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Challenge Activity - Mercadolibre Colombia",
+    "description": "Documentación generada automáticamente por el módulo <b>swagger.autogen</b>."
+  },
+  "host": "nameless-stream-81570.herokuapp.com",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "Items",
+      "description": "Endpoints"
+    }
+  ],
+  "schemes": [
+    "https",
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/api/items": {
+      "get": {
+        "tags": [
+          "Items"
+        ],
+        "description": "Consulta el endpoint: https://api.mercadolibre.com/sites/MLA/search?q=:query y devuelve los resultados en un formato indicado.<br><br> Es necesario consumir el endpoint https://api.mercadolibre.com/categories/:id_category para construir el arreglo de categorías basado en la categoría que mas resultados obtuvo",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "type": "string",
+            "description": "Frase clave de los productos a buscar"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Lista de productos encontrados.",
+            "schema": {
+              "$ref": "#/definitions/Items"
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/api/items/{id}": {
+      "get": {
+        "tags": [
+          "Items"
+        ],
+        "description": "Debe consultar los siguientes endpoints:<br><br>https://api.mercadolibre.com/items/:id<br>https://api.mercadolibre.com/items/:id/description<br><br>Y devolver los resultados en el formato indicado. <br><br> <b>IMPORTATE:</b> Fue necesario construir el arreglo de categorías para indicar la categoría propia del producto",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "ID del producto a consultar"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Información del producto encontrado",
+            "schema": {
+              "$ref": "#/definitions/Item"
+            }
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Items": {
+      "type": "object",
+      "properties": {
+        "author": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "example": "Mariangel"
+            },
+            "lastname": {
+              "type": "string",
+              "example": "Acosta"
+            }
+          }
+        },
+        "categories": {
+          "type": "array",
+          "example": [
+            "Hogar, Muebles y Jardín",
+            "Bazar y Cocina"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "example": "MLA751217909"
+              },
+              "title": {
+                "type": "string",
+                "example": "Bombillas Bombillo Luz Blanca Usado Philips 23w Luz Suave"
+              },
+              "price": {
+                "type": "object",
+                "properties": {
+                  "currency": {
+                    "type": "string",
+                    "example": "ARS"
+                  },
+                  "amount": {
+                    "type": "number",
+                    "example": 100
+                  },
+                  "decimals": {
+                    "type": "number",
+                    "example": 0
+                  }
+                }
+              },
+              "picture": {
+                "type": "string",
+                "example": "http://http2.mlstatic.com/D_965384-MLA28282915009_102018-I.jpg"
+              },
+              "condition": {
+                "type": "string",
+                "example": "used"
+              },
+              "free_shipping": {
+                "type": "boolean",
+                "example": false
+              },
+              "location": {
+                "type": "string",
+                "example": "Capital Federal"
+              }
+            }
+          }
+        }
+      }
+    },
+    "Item": {
+      "type": "object",
+      "properties": {
+        "author": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "example": "Mariangel"
+            },
+            "lastname": {
+              "type": "string",
+              "example": "Acosta"
+            }
+          }
+        },
+        "item": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "example": "MLA902787566"
+            },
+            "title": {
+              "type": "string",
+              "example": "Shorts Hombre Deportivos Gimnasio Futbol Running Pantalon"
+            },
+            "price": {
+              "type": "object",
+              "properties": {
+                "currency": {
+                  "type": "string",
+                  "example": "ARS"
+                },
+                "amount": {
+                  "type": "number",
+                  "example": 560
+                },
+                "decimals": {
+                  "type": "number",
+                  "example": 0
+                }
+              }
+            },
+            "picture": {
+              "type": "string",
+              "example": "http://http2.mlstatic.com/D_660653-MLA44464129170_122020-I.jpg"
+            },
+            "condition": {
+              "type": "string",
+              "example": "new"
+            },
+            "free_shipping": {
+              "type": "boolean",
+              "example": false
+            },
+            "sold_quantity": {
+              "type": "number",
+              "example": 1079
+            },
+            "description": {
+              "type": "string",
+              "example": "Aquí va la descripción del producto"
+            }
+          }
+        },
+        "categories": {
+          "type": "array",
+          "example": [
+            "Ropa y Accesorios",
+            "Ropa Deportiva",
+            "Shorts"
+          ],
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

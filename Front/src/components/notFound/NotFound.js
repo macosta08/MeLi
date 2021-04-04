@@ -9,7 +9,6 @@ export const NotFound = () => {
         <i className="fas fa-search-minus search-icon-notFound"></i>
         <div className="text-container-notFound">
           <p> No hay publicaciones que coincidan con tu búsqueda.</p>
-
           <ul>
             <li>Revisa la ortografía de la palabra.</li>
             <li>Utiliza palabras más genéricas o menos palabras.</li>
