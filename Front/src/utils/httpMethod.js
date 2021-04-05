@@ -2,7 +2,6 @@
 
 import axios from "axios";
 
-//export const URL = "https://infinite-castle-48786.herokuapp.com";
 export const URL = "https://nameless-stream-81570.herokuapp.com";
 export const request = async (url) => {
   try {
