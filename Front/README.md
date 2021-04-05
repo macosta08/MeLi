@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+# Descripción funcional de la aplicación
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Como primera vista se observa una caja de búsqueda la cual muestra una lista de 4 productos por página. 
 
-## Available Scripts
+Cada tarjeta al hacer click llevará a otra vista donde se observa el detalle del producto y se sigue mostrando la caja de busqueda. 
 
-In the project directory, you can run:
+En ambas vistas se cuenta con sistemas de rutas que permiten hacer una búsqueda por nombre y por id del producto. 
 
-### `yarn start`
+Se adiciona paginación para una tener una mejor experiencia de usuario al momento de navegar en la aplicación. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Descripción técnica por componentes
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+ `AppRouter` : componente principal encargado de mostrar la caja de busqueda y arbol de rutas.\
+ `SearchBox` : encargado de obtener el valor del input y cambiar la URL de acuerdo al valor obtenido.\
+ `SearchResult` : encargado de hacer el llamado al servidor cada vez que cambie la URL. Rederiza el Breadcrumb, la lista de productos y la paginación.\
+`ProductDetail` : encargado de hacer el llamado al servidor cada vez que cambie la URL.  Rederiza el Breadcrumb y el contenedor del detalle del producto.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ `Products` : rederiza dinámicamente cada tarjeta.\
+ `Product` : arma la tarjeta por producto.\
+ `ContainerDetail` : arma el contenerdor y el detalle del producto.\
+ `Breadcrumb` : arma el breadcrumb por categorias.\
+ `NotFound` : se renderiza si no encuentra un producto.\
+ `Spinner` : se renderiza un spinner al cargar la aplicación.
+ 
+ 
+## Algunas imagenes de la aplicación:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![image](https://user-images.githubusercontent.com/70062856/113529627-863af100-9589-11eb-987a-1fefd187d141.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![image](https://user-images.githubusercontent.com/70062856/113529500-3a884780-9589-11eb-9375-deaa455a92ad.png)
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
