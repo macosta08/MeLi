@@ -28,9 +28,7 @@ Se adiciona paginación para una tener una mejor experiencia de usuario al momen
  
 ## Algunas imagenes de la aplicación:
 
-![image](https://user-images.githubusercontent.com/70062856/113529627-863af100-9589-11eb-987a-1fefd187d141.png)
-
-![image](https://user-images.githubusercontent.com/70062856/113529500-3a884780-9589-11eb-9375-deaa455a92ad.png)
+![image](https://user-images.githubusercontent.com/70062856/113529627-863af100-9589-11eb-987a-1fefd187d141.png) ![image](https://user-images.githubusercontent.com/70062856/113529500-3a884780-9589-11eb-9375-deaa455a92ad.png)
 
 
 
